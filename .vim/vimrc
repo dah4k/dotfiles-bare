@@ -1,0 +1,84 @@
+let b:ergonomic_keyboard=1
+
+set nocompatible
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+
+" Always expand tabs, except for Makefiles or gitconfig
+set expandtab
+augroup make
+    autocmd Syntax make set noexpandtab
+augroup END
+augroup gitconfig
+    autocmd Syntax gitconfig set tabstop=8 | set shiftwidth=8 | set noexpandtab
+augroup END
+
+set ruler
+set number
+set list listchars=tab:▹\ ,trail:▫
+set laststatus=2
+set statusline=%F:%l:%c\ %m%r%=%l\/%L\ (%P)
+
+syntax clear
+syntax on
+set background=dark
+
+if &diff
+    set diffopt+=filler
+    set diffopt+=iwhite
+    set diffopt+=horizontall
+    if b:ergonomic_keyboard
+        map <F6> [czz
+        map <F7> ]czz
+        map <F8> dp
+        map <F9> do
+    else
+        map <F5> [czz
+        map <F6> ]czz
+        map <F7> dp
+        map <F8> do
+    endif
+else
+    if b:ergonomic_keyboard
+        map <F6> :bprevious <CR>
+        map <F7> :bnext <CR>
+        map <F8> :cprevious <CR>
+        map <F9> :cnext <CR>
+    else
+        map <F5> :bprevious <CR>
+        map <F6> :bnext <CR>
+        map <F7> :cprevious <CR>
+        map <F8> :cnext <CR>
+    endif
+endif
+
+function! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfunction
+
+augroup MY_AUTO
+    autocmd!
+    autocmd BufRead,BufNewFile Dockerfile.*,Dockerfile-*    setfiletype dockerfile
+    autocmd BufRead,BufNewFile *strace                      setfiletype strace
+    autocmd BufRead rfc*.txt setlocal filetype=rfc
+
+    " Auto-delete trailing whitespaces on save
+    autocmd BufWritePre * call TrimWhitespace()
+
+    " Auto-Reload after editing Vim config
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
+
+" More readable long text lines (Note: one escape space and one space separator)
+set wrap
+set showbreak=↳\  linebreak
+noremap j gj
+noremap k gk
+noremap H g0
+noremap L g$
+
+cnoreabbrev w1 w!
+

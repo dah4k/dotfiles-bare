@@ -1,0 +1,21 @@
+unalias -a
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias +="pushd ."
+alias -- -="popd"
+
+alias date="LC_TIME=en_GB.UTF-8 date"
+alias ip="ip --color=auto"
+alias la="ls -Altr"
+alias ls="ls -F --color=auto"
+
+alias mkae="make"
+alias maek="make"
+alias amke="make"
+
+alias j="python3 -m json.tool < "
+alias rg="rg --sort path --smart-case"
+
+## WONTFIX: Overshadow Graphviz dot command
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
