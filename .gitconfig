@@ -1,0 +1,19 @@
+[user]
+	name = dah4k
+	email = 84741290+dah4k@users.noreply.github.com
+[credential]
+	helper = cache --timeout=600
+[core]
+	autocrlf = false
+	filemode = false
+[log]
+	date = iso
+[init]
+	templateDir = ~/.config/git-default-template
+	defaultBranch = main
+[alias]
+	ci = commit
+	co = checkout
+	df = diff
+	rclone = clone --recurse-submodules
+	st = status
