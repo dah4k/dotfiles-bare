@@ -1,0 +1,19 @@
+[user]
+	name = GITHUB_NAME
+	email = EMAIL
+[credential]
+	helper = cache --timeout=600
+[core]
+	autocrlf = false
+	filemode = false
+[log]
+	date = iso
+[init]
+	templateDir = ~/.config/git-default-template
+	defaultBranch = main
+[alias]
+	ci = commit
+	co = checkout
+	df = diff
+	rclone = clone --recurse-submodules
+	st = status
