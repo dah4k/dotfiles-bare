@@ -17,5 +17,4 @@ alias amke="make"
 alias j="python3 -m json.tool < "
 alias rg="rg --sort path --smart-case"
 
-## WONTFIX: Overshadow Graphviz dot command
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
+alias d='/usr/bin/git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
