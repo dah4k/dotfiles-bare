@@ -18,3 +18,9 @@ alias j="python3 -m json.tool < "
 alias rg="rg --sort path --smart-case"
 
 alias d='/usr/bin/git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
+
+alias gcd='git checkout'
+alias gci='git commit'
+alias gdf='git diff'
+alias gls='git branch --list --all'
+alias gst='git status'
