@@ -6,6 +6,7 @@ alias +="pushd ."
 alias -- -="popd"
 
 alias date="LC_TIME=en_GB.UTF-8 date"
+alias dust="dust --reverse"
 alias ip="ip --color=auto"
 alias la="ls -Altr"
 alias ls="ls -F --color=auto"
@@ -14,11 +15,11 @@ alias mkae="make"
 alias maek="make"
 alias amke="make"
 
-alias j="python3 -m json.tool < "
 alias rg="rg --sort path --smart-case"
 
 alias c='cargo'
 alias d='/usr/bin/git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
+alias j="python3 -m json.tool < "
 alias v='vim -R'
 
 alias gcd='git checkout'
