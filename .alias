@@ -17,6 +17,7 @@ alias amke="make"
 alias j="python3 -m json.tool < "
 alias rg="rg --sort path --smart-case"
 
+alias c='cargo'
 alias d='/usr/bin/git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
 alias v='vim -R'
 
