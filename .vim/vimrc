@@ -5,6 +5,9 @@ set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 
+" Must enable visual bell to disable *beeping* audio bell...
+set noerrorbells visualbell t_vb=
+
 " Always expand tabs, except for Makefiles or gitconfig
 set expandtab
 augroup make
