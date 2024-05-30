@@ -17,8 +17,15 @@ alias amke="make"
 
 alias rg="rg --sort path --smart-case --no-ignore"
 
+alias dot='git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
+alias drun="docker run --interactive --tty --rm "
+alias dsh="docker run --interactive --tty --rm --entrypoint=/bin/sh"
+alias dbash="docker run --interactive --tty --rm --entrypoint=/bin/bash"
+alias dexec="docker exec --interactive --tty /bin/bash"
+alias dls="docker images"
+alias drmall="docker ps --quiet --all | xargs docker rm"
+
 alias c='cargo'
-alias d='/usr/bin/git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
 alias j="python3 -m json.tool < "
 alias v='vim -R'
 
