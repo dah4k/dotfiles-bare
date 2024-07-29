@@ -15,7 +15,8 @@ alias mkae="make"
 alias maek="make"
 alias amke="make"
 
-alias rg="rg --sort path --smart-case --no-ignore"
+# Search ignored, hidden, and binary files too (like `grep -r`)
+alias rg="rg --sort path --smart-case --no-ignore --hidden --binary"
 
 alias bit='git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
 
