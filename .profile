@@ -9,3 +9,9 @@ export LESSHISTFILE="/dev/null"
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
+
+## Disable .NET telemetry
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+if [ -d "$HOME/.dotnet/tools" ]; then
+    export PATH=$HOME/.dotnet/tools:$PATH
+fi
