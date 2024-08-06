@@ -1,3 +1,8 @@
+<!---
+Copyright 2020 Senthil Kumar
+SPDX-License-Identifier: CC-BY-NC-4.0
+-->
+
 # How to Run Docker as Non-Root User In Linux
 
 <https://www.ostechnix.com/how-to-run-docker-as-non-root-user-in-linux/>

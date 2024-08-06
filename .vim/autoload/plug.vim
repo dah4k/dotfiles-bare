@@ -1,4 +1,6 @@
+" Copyright (c) 2017 Junegunn Choi
 " SPDX-License-Identifier: MIT
+"
 " File:         plug.vim
 " Maintainer:   Junegunn Choi
 " License:      MIT

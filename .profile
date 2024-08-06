@@ -1,3 +1,6 @@
+# Copyright 2024 dah4k
+# SPDX-License-Identifier: MIT-0
+
 export LANG=C.UTF-8
 export PATH=$HOME/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export LC_TIME="en_US.UTF-8"

@@ -1,6 +1,8 @@
 .dotfiles-bare
 
 #===============================================================================
+# Copyright (c) 2019 Microsoft
+# SPDX-License-Identifier: MIT
 # See Also https://github.com/microsoft/dotnet/blob/main/.gitignore for more
 
 # Build results
